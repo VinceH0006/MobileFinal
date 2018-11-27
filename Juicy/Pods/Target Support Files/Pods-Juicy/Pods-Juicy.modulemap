@@ -1,0 +1,6 @@
+framework module Pods_Juicy {
+  umbrella header "Pods-Juicy-umbrella.h"
+
+  export *
+  module * { export * }
+}
