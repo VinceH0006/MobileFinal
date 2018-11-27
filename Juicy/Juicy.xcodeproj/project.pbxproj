@@ -122,8 +122,8 @@
 		5A046A9321A381CC007C957E /* IB */ = {
 			isa = PBXGroup;
 			children = (
-				5A046A87219F73BF007C957E /* LaunchScreen.storyboard */,
 				5A046A7F219F73BE007C957E /* Main.storyboard */,
+				5A046A87219F73BF007C957E /* LaunchScreen.storyboard */,
 			);
 			path = IB;
 			sourceTree = "<group>";

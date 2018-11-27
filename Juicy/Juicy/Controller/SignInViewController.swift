@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInViewController: UIViewController {
     
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var emailInput: UITextField!
+    @IBOutlet weak var passwordInput: UITextField!
     
-    override func viewDidLoad() {
+override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        
+    }
+    
     
 
     /*

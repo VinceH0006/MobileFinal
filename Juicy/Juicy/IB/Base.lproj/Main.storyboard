@@ -29,6 +29,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In Button"/>
                                 <connections>
+                                    <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b7b-5P-EQx"/>
                                     <segue destination="RYb-ET-Cqh" kind="presentation" identifier="SignInToTabController" id="gTN-mN-QWb"/>
                                 </connections>
                             </button>
@@ -66,7 +67,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="0jf-o4-5uz"/>
                     <connections>
-                        <outlet property="signInButton" destination="ft2-Ki-G6y" id="nQ2-Tl-ruT"/>
+                        <outlet property="emailInput" destination="IvS-wV-z5I" id="Jay-Fy-2R9"/>
+                        <outlet property="passwordInput" destination="qHN-gZ-vRf" id="7Ll-FU-Wtp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -323,7 +325,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZ4-JO-9ol">
-                                <rect key="frame" x="150" y="257" width="66" height="28"/>
+                                <rect key="frame" x="27" y="502" width="332" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Sign In">
@@ -334,7 +336,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-pi-hEn">
-                                <rect key="frame" x="150" y="303" width="66" height="30"/>
+                                <rect key="frame" x="27" y="547" width="332" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Register"/>
