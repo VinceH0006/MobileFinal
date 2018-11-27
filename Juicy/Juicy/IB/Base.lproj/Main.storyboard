@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696.79999999999995" y="-152.47376311844079"/>
+            <point key="canvasLocation" x="676" y="-265"/>
         </scene>
         <!--MyProfile-->
         <scene sceneID="W2o-fs-aSL">
@@ -147,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNh-bK-Pbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3672.8000000000002" y="865.81709145427294"/>
+            <point key="canvasLocation" x="3673" y="899"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Yan-Cr-WrV">
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhO-LO-5BL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4440.8000000000002" y="865.81709145427294"/>
+            <point key="canvasLocation" x="4441" y="899"/>
         </scene>
         <!--Search-->
         <scene sceneID="eMe-i2-ipU">
@@ -323,30 +323,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZ4-JO-9ol">
-                                <rect key="frame" x="164" y="255" width="47" height="30"/>
+                                <rect key="frame" x="150" y="257" width="66" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign In"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="SignInSegue" id="PTi-22-sup"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-pi-hEn">
-                                <rect key="frame" x="159" y="318" width="57" height="30"/>
+                                <rect key="frame" x="150" y="303" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <segue destination="KEX-5I-Yrn" kind="show" identifier="RegisterSegue" id="k5S-Ww-wJJ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.42352941176470588" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="KcN-Y1-tBr"/>
                     </view>
                     <navigationItem key="navigationItem" id="gvy-j2-cQ7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLX-61-fVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-402" y="116"/>
+            <point key="canvasLocation" x="-402.39999999999998" y="115.59220389805098"/>
         </scene>
         <!--Register-->
         <scene sceneID="py9-fx-b9H">
@@ -424,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKW-wx-i3E" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="644"/>
+            <point key="canvasLocation" x="676" y="531"/>
         </scene>
         <!--Profile-->
         <scene sceneID="1lB-4p-rtC">
@@ -443,7 +447,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTm-T6-omb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2733.5999999999999" y="865.81709145427294"/>
+            <point key="canvasLocation" x="2734" y="899"/>
         </scene>
     </scenes>
     <resources>
