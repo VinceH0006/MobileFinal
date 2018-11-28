@@ -7,7 +7,8 @@ target 'Juicy' do
 
   # Pods for Juicy
   pod 'Firebase/Core'
-
-
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
 end
