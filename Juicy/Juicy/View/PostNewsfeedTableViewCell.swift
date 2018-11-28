@@ -35,7 +35,7 @@ class PostNewsfeedTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
+    //When the newsfeed loads the cell the post is sent here and then loads in the information.
     func configCell(post: Post, img: UIImage? = nil){
         self.post = post
         self.username.text = post._username
@@ -51,7 +51,6 @@ class PostNewsfeedTableViewCell: UITableViewCell {
             
             ref.getData(maxSize:  10000000, completion: { (data, error) in
                 if error != nil{
-                    print(error)
                     print("couldnt load img")
                 } else {
                     if let imgData = data {
