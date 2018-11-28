@@ -15,8 +15,6 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     
     var userUid: String!
-    var email: String!
-    var password: String!
     
     
 override func viewDidLoad() {
@@ -25,23 +23,27 @@ override func viewDidLoad() {
         // Do any additional setup after loading the view.
     }
     
+    
+    
     // Additional functions
+    
+    //Go to TabBarController
     func goToTabBarVC(){
-        shouldPerformSegue(withIdentifier: "SignInToTabController", sender: self)
+        self.performSegue(withIdentifier: "SignInToTabController", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         //prepare the segue for the sign in to tab bar
         if segue.identifier == "SignInToTabController"{
             //set destination of segue = to NewsfeedViewController
-            if let destination = segue.destination as? NewsFeedViewController{
-            if ((userUid != nil) && (email != nil) && (password != nil)) {
-                //set the destinations stored variables to the current VC's stored variables(Inputed variables)
-                destination.userUid = self.userUid
-                destination.email = self.email
-                destination.password = self.password
+            if let destination = segue.destination as? NewsFeedViewController {
+                if ((userUid != nil) && (emailInput.text != nil) && (passwordInput.text != nil)) {
+                    //set the destinations stored variables to the current VC's stored variables(Inputed variables)
+                    destination.userUid = self.userUid
 
-            }
+                }
+                
             }
         }
     }
@@ -59,14 +61,9 @@ override func viewDidLoad() {
                 {(user,error) in
                     if error == nil{
                         if let user = user{
-                            
                             //set the current users inputs to the stored variables
                             self.userUid = user.user.uid
-                            self.email = email
-                            self.password = password
-
                             self.goToTabBarVC()
-                            
                         }
                         
                     }

@@ -12,9 +12,7 @@ import Firebase
 class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var userUid: String!
-    var email: String!
-    var password: String!
-    
+        
     @IBOutlet weak var postsTableView: UITableView!
     
     
