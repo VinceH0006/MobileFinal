@@ -50,6 +50,8 @@ override func viewDidLoad() {
     
     
     
+    
+    
     // Action functions
     @IBAction func signInTapped(_ sender: Any) {
         if let email = emailInput.text, let password = passwordInput.text{
