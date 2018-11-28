@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5A046A7C219F73BE007C957E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A046A7B219F73BE007C957E /* AppDelegate.swift */; };
-		5A046A7E219F73BE007C957E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A046A7D219F73BE007C957E /* ViewController.swift */; };
 		5A046A81219F73BE007C957E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A046A7F219F73BE007C957E /* Main.storyboard */; };
 		5A046A84219F73BE007C957E /* Juicy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A046A82219F73BE007C957E /* Juicy.xcdatamodeld */; };
 		5A046A86219F73BF007C957E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A046A85219F73BF007C957E /* Assets.xcassets */; };
@@ -19,6 +18,7 @@
 		5AA7184521A397A70080FDEB /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA7184421A397A70080FDEB /* MyProfileViewController.swift */; };
 		5AA7184721A397AF0080FDEB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA7184621A397AF0080FDEB /* RegisterViewController.swift */; };
 		5ADA666B21ADEE9000D03DAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADA666A21ADEE9000D03DAE /* GoogleService-Info.plist */; };
+		5ADA666D21AEFD0000D03DAE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA666C21AEFD0000D03DAE /* Post.swift */; };
 		5AF9207F21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9207E21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift */; };
 		5AF9208121A3AAD200DCC50C /* PostProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9208021A3AAD200DCC50C /* PostProfileCollectionViewCell.swift */; };
 		C1FEF78A9CEE2C558E3307DD /* Pods_Juicy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9819F5FAD40B4CABE59E82D /* Pods_Juicy.framework */; };
@@ -28,7 +28,6 @@
 		477BD69ADD46D3433700232B /* Pods-Juicy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juicy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Juicy/Pods-Juicy.debug.xcconfig"; sourceTree = "<group>"; };
 		5A046A78219F73BE007C957E /* Juicy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Juicy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A046A7B219F73BE007C957E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A046A7D219F73BE007C957E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A046A80219F73BE007C957E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A046A83219F73BE007C957E /* Juicy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Juicy.xcdatamodel; sourceTree = "<group>"; };
 		5A046A85219F73BF007C957E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		5AA7184421A397A70080FDEB /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		5AA7184621A397AF0080FDEB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5ADA666A21ADEE9000D03DAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5ADA666C21AEFD0000D03DAE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5AF9207E21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewsfeedTableViewCell.swift; sourceTree = "<group>"; };
 		5AF9208021A3AAD200DCC50C /* PostProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9819F5FAD40B4CABE59E82D /* Pods_Juicy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Juicy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				5A046A7B219F73BE007C957E /* AppDelegate.swift */,
-				5A046A7D219F73BE007C957E /* ViewController.swift */,
 				5A046A9321A381CC007C957E /* IB */,
 				5A046A9221A381C1007C957E /* Controller */,
 				5A046A9121A381BA007C957E /* View */,
@@ -96,6 +95,7 @@
 		5A046A9021A381B3007C957E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5ADA666C21AEFD0000D03DAE /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +258,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Juicy/Pods-Juicy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -267,6 +268,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -283,13 +285,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF9208121A3AAD200DCC50C /* PostProfileCollectionViewCell.swift in Sources */,
+				5ADA666D21AEFD0000D03DAE /* Post.swift in Sources */,
 				5AA7184321A3978E0080FDEB /* SearchViewController.swift in Sources */,
 				5A046A9521A38212007C957E /* SignInViewController.swift in Sources */,
 				5AF9207F21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift in Sources */,
 				5AA7184521A397A70080FDEB /* MyProfileViewController.swift in Sources */,
 				5AA7184721A397AF0080FDEB /* RegisterViewController.swift in Sources */,
 				5A046A84219F73BE007C957E /* Juicy.xcdatamodeld in Sources */,
-				5A046A7E219F73BE007C957E /* ViewController.swift in Sources */,
 				5A046A7C219F73BE007C957E /* AppDelegate.swift in Sources */,
 				5AA7184121A3977F0080FDEB /* NewsFeedViewController.swift in Sources */,
 			);

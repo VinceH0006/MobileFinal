@@ -12,6 +12,9 @@
 //1. add collection delegate and collection datasource
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import SwiftKeychainWrapper
 
 class MyProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
    
@@ -42,6 +45,12 @@ class MyProfileViewController: UIViewController, UICollectionViewDelegate, UICol
         return cell
     }
 
+    @IBAction func signOut(_ sender: Any) {
+        try! Auth.auth().signOut()
+        
+        KeychainWrapper.standard.removeObject(forKey: "uid")
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

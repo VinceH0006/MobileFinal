@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInViewController: UIViewController {
     
@@ -22,7 +23,11 @@ override func viewDidLoad() {
 
         // Do any additional setup after loading the view.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: "uid"){
+            goToTabBarVC() 
+        }
+    }
     
     
     // Additional functions

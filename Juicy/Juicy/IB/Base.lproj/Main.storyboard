@@ -140,7 +140,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Hns-Ae-5I8"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aOx-P1-vn7"/>
+                    <navigationItem key="navigationItem" id="aOx-P1-vn7">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" style="plain" id="OYF-Dr-Vxo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZCV-1y-mf6">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <connections>
+                                <action selector="signOut:" destination="4rY-nN-1GW" id="Pnd-og-Mia"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="postsCollectionView" destination="C6p-OP-Zu0" id="ZmP-0x-lvK"/>
                         <outlet property="profilePhoto" destination="VKM-jm-YMe" id="2Le-FC-BQe"/>
@@ -221,7 +232,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgx-pk-9py">
-                                <rect key="frame" x="0.0" y="65" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="515"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -232,7 +243,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="l0j-MC-ZlS">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="l0j-MC-ZlS">
                                                     <rect key="frame" x="0.0" y="43" width="375" height="181"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -263,11 +274,32 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="qgJ-24-CC6" id="l6U-8d-yBw"/>
+                                            <outlet property="postImg" destination="l0j-MC-ZlS" id="RJr-xE-rFn"/>
+                                            <outlet property="username" destination="T1S-l4-l6L" id="gwi-yX-mzu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBp-W4-fyK">
+                                <rect key="frame" x="137.5" y="580" width="100" height="38"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="6A0-k6-Rp4"/>
+                                    <constraint firstAttribute="width" constant="100" id="aTQ-en-UD3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="postTapped:" destination="peb-x5-Mux" eventType="touchUpInside" id="025-C4-vV4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mBp-W4-fyK" firstAttribute="centerX" secondItem="WAf-1U-uA0" secondAttribute="centerX" id="Ugm-pG-eb6"/>
+                            <constraint firstItem="mBp-W4-fyK" firstAttribute="bottom" secondItem="rnT-m2-CMm" secondAttribute="bottom" id="vy5-Lg-hMk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rnT-m2-CMm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="NewsFeed" id="lsV-CC-HSa"/>
@@ -459,6 +491,6 @@
         <image name="profilePhoto" width="390" height="390"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jbX-d7-J7e"/>
+        <segue reference="L8Z-UV-048"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseStorage
+import SwiftKeychainWrapper
+
 
 class RegisterViewController: UIViewController {
     
@@ -30,29 +32,38 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func keychain(){
+        KeychainWrapper.standard.set(userUid, forKey: "uid")
+    }
     
     
+    //Passing information about the user to the database, sets up the collection as you save it
     func setUpUser(){
-        if userName.text != nil{
+        if userName.text != nil && emailInput.text != nil{
             userNameVar = userName.text
+            emailVar = emailInput.text
         }
         
         let userData = [
-            "userName": userNameVar!
+            "username": userNameVar!,
+            "email": emailVar!
         ]
+        keychain()
         
         let setLocation = Database.database().reference().child("users").child(userUid)
         
         setLocation.setValue(userData)
+        
+        print("saved user info to database")
     }
     
     
 
     @IBAction func registerPressed(_ sender: Any) {
-       
+
         //Set up a new user on our Firebase database
         Auth.auth().createUser(withEmail: emailInput.text!, password: passwordInput.text!) { (user, error) in
-            
+
             if error != nil {
                 print(error!)
                 
@@ -63,9 +74,9 @@ class RegisterViewController: UIViewController {
                     self.userUid = user.user.uid
                     self.performSegue(withIdentifier: "RegisterToTabController", sender: self)
                 }
-                
-                
+                   self.setUpUser()
             }
+         
         }
         
     }
