@@ -224,23 +224,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NewsFeed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUG-dj-HIu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NewsFeed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUG-dj-HIu">
                                 <rect key="frame" x="147" y="36" width="81" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgx-pk-9py">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgx-pk-9py">
                                 <rect key="frame" x="0.0" y="65" width="375" height="515"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostNewsfeedTableViewCell" id="V3o-T7-nbZ" customClass="PostNewsfeedTableViewCell" customModule="Juicy" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostNewsfeedTableViewCell" id="V3o-T7-nbZ" customClass="PostNewsfeedTableViewCell" customModule="Juicy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V3o-T7-nbZ" id="KXQ-Ye-Mrh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="l0j-MC-ZlS">
@@ -266,7 +264,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgJ-24-CC6">
-                                                    <rect key="frame" x="15" y="232" width="114" height="30"/>
+                                                    <rect key="frame" x="15" y="232" width="345" height="57"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -297,7 +295,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rnT-m2-CMm" firstAttribute="trailing" secondItem="SUG-dj-HIu" secondAttribute="trailing" constant="147" id="4lY-KZ-n7h"/>
+                            <constraint firstItem="fgx-pk-9py" firstAttribute="trailing" secondItem="rnT-m2-CMm" secondAttribute="trailing" id="4ou-75-7d3"/>
+                            <constraint firstItem="mBp-W4-fyK" firstAttribute="top" secondItem="fgx-pk-9py" secondAttribute="bottom" id="6H8-nF-krm"/>
+                            <constraint firstItem="fgx-pk-9py" firstAttribute="leading" secondItem="rnT-m2-CMm" secondAttribute="leading" id="S11-HI-ysj"/>
                             <constraint firstItem="mBp-W4-fyK" firstAttribute="centerX" secondItem="WAf-1U-uA0" secondAttribute="centerX" id="Ugm-pG-eb6"/>
+                            <constraint firstItem="fgx-pk-9py" firstAttribute="top" secondItem="SUG-dj-HIu" secondAttribute="bottom" constant="8" id="VKm-Hd-7SN"/>
+                            <constraint firstItem="SUG-dj-HIu" firstAttribute="leading" secondItem="rnT-m2-CMm" secondAttribute="leading" constant="147" id="Yeu-6J-5kp"/>
+                            <constraint firstItem="SUG-dj-HIu" firstAttribute="top" secondItem="rnT-m2-CMm" secondAttribute="top" constant="16" id="b9L-ZB-mPL"/>
                             <constraint firstItem="mBp-W4-fyK" firstAttribute="bottom" secondItem="rnT-m2-CMm" secondAttribute="bottom" id="vy5-Lg-hMk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rnT-m2-CMm"/>

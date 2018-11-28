@@ -63,7 +63,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    
+    //Tableview loading
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //Get number of rows from online data base
@@ -84,6 +84,12 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
+    
+    
+    
+    
+    
+    //Additional functions
     @IBAction func postTapped(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil )
         print("tapped")

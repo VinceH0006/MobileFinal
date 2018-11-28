@@ -49,7 +49,7 @@ class PostNewsfeedTableViewCell: UITableViewCell {
             let ref = Storage.storage().reference(forURL: post._postImg)
           
             
-            ref.getData(maxSize:  100000, completion: { (data, error) in
+            ref.getData(maxSize:  10000000, completion: { (data, error) in
                 if error != nil{
                     print(error)
                     print("couldnt load img")
