@@ -46,6 +46,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
                     //clears the posts array so that when we add a new one it doesn't show them all again
                     self.posts.removeAll()
                     
+                    //Runs through all the data in a for loop and appends it to posts
                     for data in snapshot {
                         print(data)
                         print("This is the data")
@@ -63,6 +64,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    /*Table View Set up*/
     //Tableview loading
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -77,8 +79,11 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         
         //Fill cell with data from pulled database data
         let post = posts[indexPath.row]
+        
         cell.configCell(post: post)
+        
         print("Loading cell")
+        
         return cell
         
     }
@@ -91,10 +96,15 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     //Additional functions
     @IBAction func postTapped(_ sender: Any) {
+        
         present(imagePicker, animated: true, completion: nil )
+        
         print("tapped")
+        
     }
     
+    
+    //Image Picker Controller
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             selectedImage = image
@@ -147,6 +157,8 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
 
 
     }
+    
+    //Create post and upload it to firebase
     func postToFirebase(imgUrl: String){
         
         let userID = Auth.auth().currentUser?.uid
@@ -158,6 +170,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
             let username = data["username"]
             
             let post: Dictionary<String, AnyObject> = [
+                "userId": userID as AnyObject,
                 "username": username!,
                 "imgUrl":  imgUrl as AnyObject,
                 "caption": "Beautiful sunny day" as AnyObject

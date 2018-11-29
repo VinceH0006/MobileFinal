@@ -33,11 +33,12 @@ class MyProfileViewController: UIViewController, UICollectionViewDelegate, UICol
         // Do any additional setup after loading the view.
     }
     
-    
+    /*Collection View Set Up*/
+    //number of items
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
-    
+    //CellForItemAt 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let  cell = postsCollectionView.dequeueReusableCell(withReuseIdentifier: "PostProfileCollectionViewCell", for: indexPath) as! PostProfileCollectionViewCell
         
