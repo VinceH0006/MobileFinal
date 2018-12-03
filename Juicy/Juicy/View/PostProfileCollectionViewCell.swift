@@ -19,5 +19,35 @@ class PostProfileCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+//
+//    //When the newsfeed loads the cell the post is sent here and then loads in the information.
+//    func configCell(post: Post, img: UIImage? = nil){
+//        self.post = post
+//        self.username.text = post._username
+//        self.caption.text = post._caption
+//
+//        if img != nil{
+//            self.postImg.image = img
+//            print("img does not equal nill in config cell")
+//        }
+//        else {
+//            let ref = Storage.storage().reference(forURL: post._postImg)
+//
+//
+//            ref.getData(maxSize:  10000000, completion: { (data, error) in
+//                if error != nil{
+//                    print("couldnt load img")
+//                } else {
+//                    if let imgData = data {
+//                        if let img = UIImage(data: imgData){
+//                            self.postImg.image = img
+//                        }
+//                    }
+//                }
+//
+//            })
+//        }
+//
+//    }
 
 }

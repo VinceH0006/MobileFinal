@@ -34,7 +34,7 @@ class Post{
         
         _postKey = postKey
         
-        if let username = postData["userName"] as? String{
+        if let username = postData["username"] as? String{
             _username = username
         }
         

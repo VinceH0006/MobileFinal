@@ -86,8 +86,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         let post = posts[indexPath.row]
         
         cell.configCell(post: post)
-        
-        
+    
         return cell
         
     }
@@ -108,6 +107,9 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     //Image Picker Controller
+    //controls the image picker
+    //saves the image selected to storage on firebase
+    //calls postToFirebase to pu the post on the firebase database
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             selectedImage = image
@@ -161,7 +163,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
 
     }
     
-    //Create post and upload it to firebase
+    //Create post and upload it to firebase database
     func postToFirebase(imgUrl: String){
         
         let userID = Auth.auth().currentUser?.uid

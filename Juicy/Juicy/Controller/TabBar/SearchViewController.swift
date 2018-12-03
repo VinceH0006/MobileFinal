@@ -9,7 +9,8 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
