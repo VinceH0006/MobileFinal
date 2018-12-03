@@ -18,6 +18,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
         
     @IBOutlet weak var postsTableView: UITableView!
+    @IBOutlet weak var postButton: UIButton!
     
     var userUid: String!
     var posts = [Post]()
@@ -32,9 +33,16 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         postsTableView.delegate = self
         postsTableView.dataSource = self
+        
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
+        
+        
+        //PostButton Design in future make its own class with this in awake from nib
+        postButton.layer.cornerRadius = postButton.frame.height/2
+        postButton.clipsToBounds = true
+        
         
         
         //accesses database "posts" and observes the data in a snapshot

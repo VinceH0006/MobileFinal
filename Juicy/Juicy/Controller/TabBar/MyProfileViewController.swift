@@ -55,7 +55,7 @@ class MyProfileViewController: UIViewController, UICollectionViewDelegate, UICol
     
     
     
-    
+    //Location manager 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
 
         let location = locations[locations.count - 1]
@@ -92,6 +92,7 @@ class MyProfileViewController: UIViewController, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let  cell = postsCollectionView.dequeueReusableCell(withReuseIdentifier: "PostProfileCollectionViewCell", for: indexPath) as! PostProfileCollectionViewCell
         
+        cell.backgroundColor = UIColor.blue
         print("Success")
         return cell
     }

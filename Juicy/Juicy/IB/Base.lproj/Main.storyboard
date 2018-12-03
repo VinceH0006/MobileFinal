@@ -231,7 +231,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgx-pk-9py">
-                                <rect key="frame" x="0.0" y="89" width="375" height="602"/>
+                                <rect key="frame" x="0.0" y="89" width="375" height="640"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostNewsfeedTableViewCell" id="V3o-T7-nbZ" customClass="PostNewsfeedTableViewCell" customModule="Juicy" customModuleProvider="target">
@@ -281,13 +281,15 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBp-W4-fyK">
-                                <rect key="frame" x="137.66666666666666" y="691" width="100" height="38"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="137.66666666666666" y="678" width="100" height="38"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="6A0-k6-Rp4"/>
                                     <constraint firstAttribute="width" constant="100" id="aTQ-en-UD3"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="postTapped:" destination="peb-x5-Mux" eventType="touchUpInside" id="025-C4-vV4"/>
                                 </connections>
@@ -297,24 +299,25 @@
                         <constraints>
                             <constraint firstItem="rnT-m2-CMm" firstAttribute="trailing" secondItem="SUG-dj-HIu" secondAttribute="trailing" constant="147" id="4lY-KZ-n7h"/>
                             <constraint firstItem="fgx-pk-9py" firstAttribute="trailing" secondItem="rnT-m2-CMm" secondAttribute="trailing" id="4ou-75-7d3"/>
-                            <constraint firstItem="mBp-W4-fyK" firstAttribute="top" secondItem="fgx-pk-9py" secondAttribute="bottom" id="6H8-nF-krm"/>
+                            <constraint firstItem="mBp-W4-fyK" firstAttribute="top" secondItem="fgx-pk-9py" secondAttribute="bottom" constant="-51" id="6H8-nF-krm"/>
                             <constraint firstItem="fgx-pk-9py" firstAttribute="leading" secondItem="rnT-m2-CMm" secondAttribute="leading" id="S11-HI-ysj"/>
                             <constraint firstItem="mBp-W4-fyK" firstAttribute="centerX" secondItem="WAf-1U-uA0" secondAttribute="centerX" id="Ugm-pG-eb6"/>
                             <constraint firstItem="fgx-pk-9py" firstAttribute="top" secondItem="SUG-dj-HIu" secondAttribute="bottom" constant="8" id="VKm-Hd-7SN"/>
                             <constraint firstItem="SUG-dj-HIu" firstAttribute="leading" secondItem="rnT-m2-CMm" secondAttribute="leading" constant="147" id="Yeu-6J-5kp"/>
                             <constraint firstItem="SUG-dj-HIu" firstAttribute="top" secondItem="rnT-m2-CMm" secondAttribute="top" constant="16" id="b9L-ZB-mPL"/>
-                            <constraint firstItem="mBp-W4-fyK" firstAttribute="bottom" secondItem="rnT-m2-CMm" secondAttribute="bottom" id="vy5-Lg-hMk"/>
+                            <constraint firstItem="mBp-W4-fyK" firstAttribute="bottom" secondItem="rnT-m2-CMm" secondAttribute="bottom" constant="-13" id="vy5-Lg-hMk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rnT-m2-CMm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="NewsFeed" id="lsV-CC-HSa"/>
                     <connections>
+                        <outlet property="postButton" destination="mBp-W4-fyK" id="bXY-le-sdY"/>
                         <outlet property="postsTableView" destination="fgx-pk-9py" id="IC8-3F-J9a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFQ-gr-GJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2733.5999999999999" y="-599.55022488755628"/>
+            <point key="canvasLocation" x="2733.5999999999999" y="-600"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fI7-je-taJ">
