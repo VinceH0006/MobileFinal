@@ -48,15 +48,12 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
                     
                     //Runs through all the data in a for loop and appends it to posts
                     for data in snapshot {
-                        print(data)
-                        print("This is the data")
                         if let postDict = data.value as? Dictionary<String, AnyObject>{
                             let key = data.key
                             let post = Post(postKey: key, postData: postDict)
                             
                             self.posts.append(post)
                         }
-                        print("MADE IT TO THE SNAPSHOT OF DATABASE")
                     }
                 }
                 self.postsTableView.reloadData()
@@ -82,7 +79,6 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.configCell(post: post)
         
-        print("Loading cell")
         
         return cell
         
@@ -99,7 +95,6 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         
         present(imagePicker, animated: true, completion: nil )
         
-        print("tapped")
         
     }
     

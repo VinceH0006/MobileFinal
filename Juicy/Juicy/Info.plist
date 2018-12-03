@@ -43,5 +43,7 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We need to access your photos</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need Location to find coordinates.</string>
 </dict>
 </plist>
