@@ -45,5 +45,7 @@
 	<string>We need to access your photos</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Need Location to find coordinates.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Need to access camera</string>
 </dict>
 </plist>

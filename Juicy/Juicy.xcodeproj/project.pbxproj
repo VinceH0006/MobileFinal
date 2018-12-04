@@ -20,6 +20,7 @@
 		5ADA666B21ADEE9000D03DAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADA666A21ADEE9000D03DAE /* GoogleService-Info.plist */; };
 		5ADA666D21AEFD0000D03DAE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA666C21AEFD0000D03DAE /* Post.swift */; };
 		5ADA666F21B1EE8C00D03DAE /* SignOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA666E21B1EE8C00D03DAE /* SignOrRegisterViewController.swift */; };
+		5AEF7B1921B619E700822CD0 /* PostMakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7B1821B619E700822CD0 /* PostMakingViewController.swift */; };
 		5AF9207F21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9207E21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift */; };
 		5AF9208121A3AAD200DCC50C /* PostProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9208021A3AAD200DCC50C /* PostProfileCollectionViewCell.swift */; };
 		C1FEF78A9CEE2C558E3307DD /* Pods_Juicy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9819F5FAD40B4CABE59E82D /* Pods_Juicy.framework */; };
@@ -42,6 +43,7 @@
 		5ADA666A21ADEE9000D03DAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5ADA666C21AEFD0000D03DAE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5ADA666E21B1EE8C00D03DAE /* SignOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOrRegisterViewController.swift; sourceTree = "<group>"; };
+		5AEF7B1821B619E700822CD0 /* PostMakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMakingViewController.swift; sourceTree = "<group>"; };
 		5AF9207E21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewsfeedTableViewCell.swift; sourceTree = "<group>"; };
 		5AF9208021A3AAD200DCC50C /* PostProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9819F5FAD40B4CABE59E82D /* Pods_Juicy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Juicy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				5AA7184021A3977F0080FDEB /* NewsFeedViewController.swift */,
+				5AEF7B1821B619E700822CD0 /* PostMakingViewController.swift */,
 				5AA7184421A397A70080FDEB /* MyProfileViewController.swift */,
 				5AA7184221A3978E0080FDEB /* SearchViewController.swift */,
 			);
@@ -296,6 +299,7 @@
 				5AA7184721A397AF0080FDEB /* RegisterViewController.swift in Sources */,
 				5A046A84219F73BE007C957E /* Juicy.xcdatamodeld in Sources */,
 				5A046A7C219F73BE007C957E /* AppDelegate.swift in Sources */,
+				5AEF7B1921B619E700822CD0 /* PostMakingViewController.swift in Sources */,
 				5ADA666F21B1EE8C00D03DAE /* SignOrRegisterViewController.swift in Sources */,
 				5AA7184121A3977F0080FDEB /* NewsFeedViewController.swift in Sources */,
 			);

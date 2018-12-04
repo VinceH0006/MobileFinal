@@ -101,7 +101,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     //Additional functions
     @IBAction func postTapped(_ sender: Any) {
         
-        present(imagePicker, animated: true, completion: nil )
+//        present(imagePicker, animated: true, completion: nil )
         
         
     }
