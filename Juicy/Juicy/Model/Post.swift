@@ -16,6 +16,7 @@ import FirebaseDatabase
 
 class Post{
     var _username: String!
+    var _userID: String!
    // var location: String
     var _postImg: String!
     var _caption: String!
@@ -24,8 +25,9 @@ class Post{
     var _postKey: String!
     var _postRef: DatabaseReference!
     
-    init(name: String, img: String, caption: String) {
+    init(name: String, userID: String, img: String, caption: String) {
         _username = name
+        _userID = userID
         _postImg = img
         _caption = caption
     }
@@ -34,8 +36,12 @@ class Post{
         
         _postKey = postKey
         
-        if let username = postData["userName"] as? String{
+        if let username = postData["username"] as? String{
             _username = username
+        }
+        
+        if let userID = postData["userId"] as? String{
+            _userID = userID
         }
         
         if let image = postData["imgUrl"] as? String{

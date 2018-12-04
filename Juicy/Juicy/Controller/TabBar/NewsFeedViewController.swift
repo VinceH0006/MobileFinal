@@ -18,10 +18,12 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
         
     @IBOutlet weak var postsTableView: UITableView!
+    @IBOutlet weak var postButton: UIButton!
     
     var userUid: String!
     var posts = [Post]()
     var post:  Post!
+    
     var imagePicker:UIImagePickerController!
     var imageSelected = false
     var selectedImage: UIImage!
@@ -32,9 +34,16 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         postsTableView.delegate = self
         postsTableView.dataSource = self
+        
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
+        
+        
+        //PostButton Design in future make its own class with this in awake from nib
+        postButton.layer.cornerRadius = postButton.frame.height/2
+        postButton.clipsToBounds = true
+        
         
         
         //accesses database "posts" and observes the data in a snapshot
@@ -46,16 +55,14 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
                     //clears the posts array so that when we add a new one it doesn't show them all again
                     self.posts.removeAll()
                     
+                    //Runs through all the data in a for loop and appends it to posts
                     for data in snapshot {
-                        print(data)
-                        print("This is the data")
                         if let postDict = data.value as? Dictionary<String, AnyObject>{
                             let key = data.key
                             let post = Post(postKey: key, postData: postDict)
                             
                             self.posts.append(post)
                         }
-                        print("MADE IT TO THE SNAPSHOT OF DATABASE")
                     }
                 }
                 self.postsTableView.reloadData()
@@ -63,6 +70,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    /*Table View Set up*/
     //Tableview loading
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -77,8 +85,9 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         
         //Fill cell with data from pulled database data
         let post = posts[indexPath.row]
+        
         cell.configCell(post: post)
-        print("Loading cell")
+    
         return cell
         
     }
@@ -91,10 +100,17 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     //Additional functions
     @IBAction func postTapped(_ sender: Any) {
+        
         present(imagePicker, animated: true, completion: nil )
-        print("tapped")
+        
+        
     }
     
+    
+    //Image Picker Controller
+    //controls the image picker
+    //saves the image selected to storage on firebase
+    //calls postToFirebase to pu the post on the firebase database
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             selectedImage = image
@@ -147,6 +163,8 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
 
 
     }
+    
+    //Create post and upload it to firebase database
     func postToFirebase(imgUrl: String){
         
         let userID = Auth.auth().currentUser?.uid
@@ -158,6 +176,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
             let username = data["username"]
             
             let post: Dictionary<String, AnyObject> = [
+                "userId": userID as AnyObject,
                 "username": username!,
                 "imgUrl":  imgUrl as AnyObject,
                 "caption": "Beautiful sunny day" as AnyObject
