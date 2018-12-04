@@ -103,26 +103,34 @@
                                     <constraint firstAttribute="width" constant="343" id="IIW-Om-WcY"/>
                                     <constraint firstAttribute="height" constant="264" id="gUy-i2-ImG"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HVA-1t-Trp">
-                                    <size key="itemSize" width="88" height="79"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="HVA-1t-Trp">
+                                    <size key="itemSize" width="110" height="110"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PostProfileCollectionViewCell" reuseIdentifier="PostProfileCollectionViewCell" id="a9F-48-epW" customClass="PostProfileCollectionViewCell" customModule="Juicy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="88" height="79"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="88" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JzA-AH-UM6">
-                                                    <rect key="frame" x="2" y="1" width="84" height="76"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JzA-AH-UM6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JzA-AH-UM6" secondAttribute="trailing" id="Ohl-Kb-Eky"/>
+                                            <constraint firstAttribute="bottom" secondItem="JzA-AH-UM6" secondAttribute="bottom" id="SjN-YE-tYb"/>
+                                            <constraint firstItem="JzA-AH-UM6" firstAttribute="leading" secondItem="a9F-48-epW" secondAttribute="leading" id="TsP-bD-2Ix"/>
+                                            <constraint firstItem="JzA-AH-UM6" firstAttribute="top" secondItem="a9F-48-epW" secondAttribute="top" id="ZH8-Qc-J8H"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="postImage" destination="JzA-AH-UM6" id="vwH-1e-gDs"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -224,28 +232,32 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l0j-MC-ZlS">
-                                                    <rect key="frame" x="0.0" y="53" width="375" height="181"/>
+                                                    <rect key="frame" x="0.0" y="50" width="375" height="181"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="181" id="IhL-Mt-1wE"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1S-l4-l6L">
-                                                    <rect key="frame" x="51.666666666666657" y="13" width="45" height="21"/>
+                                                    <rect key="frame" x="54" y="11.666666666666664" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQm-hD-lNT">
-                                                    <rect key="frame" x="104.66666666666669" y="14.666666666666664" width="59" height="18"/>
+                                                    <rect key="frame" x="107" y="13" width="59" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.6869987917" green="0.68592487940000002" blue="0.70468345210000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="LDj-eE-iVh">
-                                                    <rect key="frame" x="6" y="2" width="37.666666666666664" height="43"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="LDj-eE-iVh">
+                                                    <rect key="frame" x="6" y="2" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="OM6-8F-RVV"/>
+                                                        <constraint firstAttribute="height" constant="40" id="c2W-IV-dbN"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgJ-24-CC6">
-                                                    <rect key="frame" x="6" y="238" width="345" height="57"/>
+                                                    <rect key="frame" x="12" y="238" width="354" height="57"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -253,14 +265,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="LDj-eE-iVh" firstAttribute="height" secondItem="KXQ-Ye-Mrh" secondAttribute="height" multiplier="0.15" constant="-2" id="09D-as-rgA"/>
                                                 <constraint firstItem="T1S-l4-l6L" firstAttribute="leading" secondItem="LDj-eE-iVh" secondAttribute="trailing" constant="8" id="1pO-jV-93e"/>
                                                 <constraint firstItem="l0j-MC-ZlS" firstAttribute="top" secondItem="LDj-eE-iVh" secondAttribute="bottom" constant="8" id="E24-Uj-IhI"/>
                                                 <constraint firstItem="LDj-eE-iVh" firstAttribute="top" secondItem="KXQ-Ye-Mrh" secondAttribute="top" constant="2" id="K1j-OL-fyN"/>
                                                 <constraint firstItem="T1S-l4-l6L" firstAttribute="centerY" secondItem="LDj-eE-iVh" secondAttribute="centerY" id="PLz-JK-wN4"/>
                                                 <constraint firstItem="IQm-hD-lNT" firstAttribute="leading" secondItem="T1S-l4-l6L" secondAttribute="trailing" constant="8" id="Uf6-o1-IQd"/>
                                                 <constraint firstItem="LDj-eE-iVh" firstAttribute="leading" secondItem="KXQ-Ye-Mrh" secondAttribute="leading" constant="6" id="Zdc-yo-OFk"/>
-                                                <constraint firstItem="LDj-eE-iVh" firstAttribute="width" secondItem="KXQ-Ye-Mrh" secondAttribute="width" multiplier="0.1" id="hmI-I3-u04"/>
                                                 <constraint firstItem="l0j-MC-ZlS" firstAttribute="leading" secondItem="KXQ-Ye-Mrh" secondAttribute="leading" id="rao-AL-cla"/>
                                                 <constraint firstItem="IQm-hD-lNT" firstAttribute="centerY" secondItem="LDj-eE-iVh" secondAttribute="centerY" id="sbb-pP-9aT"/>
                                                 <constraint firstAttribute="trailing" secondItem="l0j-MC-ZlS" secondAttribute="trailing" id="uuc-oP-0Jh"/>
@@ -269,6 +279,7 @@
                                         <connections>
                                             <outlet property="caption" destination="qgJ-24-CC6" id="l6U-8d-yBw"/>
                                             <outlet property="postImg" destination="l0j-MC-ZlS" id="RJr-xE-rFn"/>
+                                            <outlet property="userProfilePhoto" destination="LDj-eE-iVh" id="JKb-LJ-nue"/>
                                             <outlet property="username" destination="T1S-l4-l6L" id="gwi-yX-mzu"/>
                                         </connections>
                                     </tableViewCell>

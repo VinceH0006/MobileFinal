@@ -23,6 +23,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     var userUid: String!
     var posts = [Post]()
     var post:  Post!
+    
     var imagePicker:UIImagePickerController!
     var imageSelected = false
     var selectedImage: UIImage!
