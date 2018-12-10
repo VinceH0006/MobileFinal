@@ -30,7 +30,7 @@ class PostNewsfeedTableViewCell: UITableViewCell {
         super.awakeFromNib()
         userProfilePhoto.layer.cornerRadius = userProfilePhoto.frame.width/2
         userProfilePhoto.clipsToBounds = true
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

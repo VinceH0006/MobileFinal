@@ -14,7 +14,7 @@ import FirebaseAuth
 import SwiftKeychainWrapper
 
 
-class RegisterViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RegisterViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
 
     @IBOutlet weak var userName: UITextField!
@@ -22,6 +22,7 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate, 
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var imagePickerButton: UIButton!
     @IBOutlet weak var userImagePickerUIView: UIImageView!
+    @IBOutlet weak var registerButton: UIButton!
     
     
     var userNameVar: String!
@@ -43,6 +44,17 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate, 
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
+
+        userName.delegate = self
+        emailInput.delegate = self
+        passwordInput.delegate = self
+        
+        userName.delegate = self
+        emailInput.delegate = self
+        passwordInput.delegate = self
+        
+        registerButton.layer.cornerRadius = registerButton.frame.height/2
+        registerButton.clipsToBounds = true
 
     }
     
@@ -170,6 +182,13 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate, 
         }
         imagePicker.dismiss(animated: true, completion: nil )
         
+    }
+    
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }

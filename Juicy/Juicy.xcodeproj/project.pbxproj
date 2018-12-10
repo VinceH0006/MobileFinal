@@ -21,6 +21,9 @@
 		5ADA666D21AEFD0000D03DAE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA666C21AEFD0000D03DAE /* Post.swift */; };
 		5ADA666F21B1EE8C00D03DAE /* SignOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA666E21B1EE8C00D03DAE /* SignOrRegisterViewController.swift */; };
 		5AEF7B1921B619E700822CD0 /* PostMakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7B1821B619E700822CD0 /* PostMakingViewController.swift */; };
+		5AEF7B3C21BEEAF400822CD0 /* ShakingLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7B3B21BEEAF400822CD0 /* ShakingLogo.swift */; };
+		5AEF7B3E21BEF77800822CD0 /* SearchTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7B3D21BEF77800822CD0 /* SearchTabTableViewCell.swift */; };
+		5AEF7B4021BEFDC200822CD0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7B3F21BEFDC200822CD0 /* Profile.swift */; };
 		5AF9207F21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9207E21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift */; };
 		5AF9208121A3AAD200DCC50C /* PostProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9208021A3AAD200DCC50C /* PostProfileCollectionViewCell.swift */; };
 		C1FEF78A9CEE2C558E3307DD /* Pods_Juicy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9819F5FAD40B4CABE59E82D /* Pods_Juicy.framework */; };
@@ -44,6 +47,9 @@
 		5ADA666C21AEFD0000D03DAE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5ADA666E21B1EE8C00D03DAE /* SignOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOrRegisterViewController.swift; sourceTree = "<group>"; };
 		5AEF7B1821B619E700822CD0 /* PostMakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMakingViewController.swift; sourceTree = "<group>"; };
+		5AEF7B3B21BEEAF400822CD0 /* ShakingLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShakingLogo.swift; path = Juicy/Model/ShakingLogo.swift; sourceTree = SOURCE_ROOT; };
+		5AEF7B3D21BEF77800822CD0 /* SearchTabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabTableViewCell.swift; sourceTree = "<group>"; };
+		5AEF7B3F21BEFDC200822CD0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5AF9207E21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewsfeedTableViewCell.swift; sourceTree = "<group>"; };
 		5AF9208021A3AAD200DCC50C /* PostProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9819F5FAD40B4CABE59E82D /* Pods_Juicy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Juicy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,8 @@
 		5A046A9021A381B3007C957E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5AEF7B3F21BEFDC200822CD0 /* Profile.swift */,
+				5AEF7B3B21BEEAF400822CD0 /* ShakingLogo.swift */,
 				5ADA666C21AEFD0000D03DAE /* Post.swift */,
 			);
 			path = Model;
@@ -107,6 +115,7 @@
 		5A046A9121A381BA007C957E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5AEF7B3D21BEF77800822CD0 /* SearchTabTableViewCell.swift */,
 				5AF9207E21A3A49D00DCC50C /* PostNewsfeedTableViewCell.swift */,
 				5AF9208021A3AAD200DCC50C /* PostProfileCollectionViewCell.swift */,
 			);
@@ -290,6 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEF7B3C21BEEAF400822CD0 /* ShakingLogo.swift in Sources */,
+				5AEF7B4021BEFDC200822CD0 /* Profile.swift in Sources */,
 				5AF9208121A3AAD200DCC50C /* PostProfileCollectionViewCell.swift in Sources */,
 				5ADA666D21AEFD0000D03DAE /* Post.swift in Sources */,
 				5AA7184321A3978E0080FDEB /* SearchViewController.swift in Sources */,
@@ -302,6 +313,7 @@
 				5AEF7B1921B619E700822CD0 /* PostMakingViewController.swift in Sources */,
 				5ADA666F21B1EE8C00D03DAE /* SignOrRegisterViewController.swift in Sources */,
 				5AA7184121A3977F0080FDEB /* NewsFeedViewController.swift in Sources */,
+				5AEF7B3E21BEF77800822CD0 /* SearchTabTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

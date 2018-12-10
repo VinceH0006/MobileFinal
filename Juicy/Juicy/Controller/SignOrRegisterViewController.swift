@@ -13,6 +13,8 @@ class SignOrRegisterViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
+    @IBOutlet weak var shakingLogoView: ShakingLogo!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         signInButton.layer.cornerRadius = signInButton.frame.height/2
@@ -20,6 +22,9 @@ class SignOrRegisterViewController: UIViewController {
         
         registerButton.layer.cornerRadius = registerButton.frame.height/2
         registerButton.clipsToBounds = true
+        
+        shakingLogoView.shake()
+
     }
     
 

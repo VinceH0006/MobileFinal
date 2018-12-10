@@ -28,6 +28,8 @@ class PostProfileCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        postImage.layer.cornerRadius = 4
+        postImage.clipsToBounds = true
         // Initialization code
     }
 

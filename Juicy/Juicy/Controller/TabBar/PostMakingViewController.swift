@@ -16,7 +16,7 @@ import MapKit
 import CoreLocation
 
 
-class PostMakingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PostMakingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var addImageButton: UIButton!
     @IBOutlet weak var captionTextField: UITextField!
@@ -41,9 +41,13 @@ class PostMakingViewController: UIViewController, UIImagePickerControllerDelegat
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
-
+        
+        captionTextField.delegate = self
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func addImageButtonPressed(_ sender: Any) {
         
@@ -193,4 +197,9 @@ class PostMakingViewController: UIViewController, UIImagePickerControllerDelegat
     }
     */
 
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
