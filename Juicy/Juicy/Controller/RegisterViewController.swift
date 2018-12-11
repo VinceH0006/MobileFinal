@@ -12,6 +12,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseAuth
 import SwiftKeychainWrapper
+import CoreData
 
 
 class RegisterViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
@@ -32,6 +33,8 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate, 
     var imagePicker: UIImagePickerController!
     var imageSelected = false
     var selectedImage: UIImage!
+    
+
     
 
     
@@ -71,10 +74,46 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate, 
     }
     
     
+    
+    
+    
+    
+    
+    //saves the data into Core Data using NS Managed Object Context
+    func save(name: String) {
+
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+
+        // 1
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        // 2
+        let entity = NSEntityDescription.entity(forEntityName: "Username", in: managedContext)!
+
+        let username = NSManagedObject(entity: entity,
+                                     insertInto: managedContext)
+
+        // 3
+        username.setValue(name, forKeyPath: "username")
+
+        // 4
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+
+    
     //register pressed
     //saves the email password to the database as a new user
     //calls upoad data
     @IBAction func registerPressed(_ sender: Any) {
+        
+        self.save(name: userName.text!)
+        
 
         //Set up a new user on our Firebase database
         Auth.auth().createUser(withEmail: emailInput.text!, password: passwordInput.text!) { (user, error) in
